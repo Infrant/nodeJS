@@ -11,14 +11,16 @@ const {green, yellow, red} = colors
 const colorsList = [green, yellow, red]
 let counter = 0
 
-for (let i = from; i <= to; i++) {
-    let isPrime = true
-
-    for (let j = 2; j < i; j++) {
-        if (i % j === 0) isPrime = false
+const isPrime = num => {
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) return false
     }
 
-    if (isPrime) {
+    return true
+}
+
+for (let i = from; i <= to; i++) {
+    if (isPrime(i)) {
         const idx = counter % 3
         const colorPrime = colorsList[idx](i)
         console.log(colorPrime)
@@ -26,4 +28,4 @@ for (let i = from; i <= to; i++) {
     }
 }
 
-if (!counter) console.log(red('В диапозоне нет простых чисел'))
+if (!counter) console.log(red('В диапазоне нет простых чисел'))
