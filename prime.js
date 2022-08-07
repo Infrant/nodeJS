@@ -20,12 +20,12 @@ const isPrime = num => {
 }
 
 for (let i = from; i <= to; i++) {
-    if (isPrime(i)) {
-        const idx = counter % 3
-        const colorPrime = colorsList[idx](i)
-        console.log(colorPrime)
-        counter++
-    }
+    if (!isPrime(i)) continue
+
+    const idx = counter % 3
+    const colorPrime = colorsList[idx](i)
+    console.log(colorPrime)
+    counter++
 }
 
 if (!counter) console.log(red('В диапазоне нет простых чисел'))
