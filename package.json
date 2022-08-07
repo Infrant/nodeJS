@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Infrant/nodeJS#readme",
   "dependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "moment": "^2.29.4",
+    "moment-precise-range-plugin": "^1.3.0"
   }
 }
